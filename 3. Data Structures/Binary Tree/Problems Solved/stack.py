@@ -8,11 +8,12 @@ class Stack():
     def push(self, item):
         self.items.append(item)				
 
-    def pop(self):
-        return self.items.pop()
+    def pop(self):  
+        if not self.is_empty():
+            return self.items.pop()
     
     def is_empty(self):
-        return self.items == []
+        return len(self.items) == 0
     
     def peek(self):
         if not self.is_empty():
@@ -21,13 +22,13 @@ class Stack():
     def get_stack(self):
         return self.items
 
-myStack = Stack()
-myStack.push("A")
-myStack.push("B")
-myStack.push("C")
-myStack.push("D")
-myStack.pop()
+# myStack = Stack()
+# myStack.push("A")
+# myStack.push("B")
+# myStack.push("C")
+# myStack.push("D")
+# myStack.pop()
 
-print(myStack.items)
-myStack.push(myStack.pop())
-print(myStack.items)
+# print(myStack.items)
+# myStack.push(myStack.pop())
+# print(myStack.items)

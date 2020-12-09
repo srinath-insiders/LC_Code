@@ -54,24 +54,7 @@ class BST(object):
                 return self.search_recursive(curr.left, value)                  
         else:
             return False    
-    
 
-    def is_bst_satisfied_mine(self):
-      if self.is_bst_helper(self.root) is None:
-        return True
-      else:
-        return False
-    def is_bst_helper(self, curr):
-      if curr.left:
-        if curr.left.value < curr.value:
-          self.is_bst_helper(curr.left)
-        else:
-          return False  
-      if curr.right:
-        if curr.right.value > curr.value:
-          self.is_bst_helper(curr.right)
-        else:
-          return False 
 
 bst = BST(10)
 bst.insert_recursive_helper(3)
@@ -84,4 +67,4 @@ bst.insert_iterative(123)
 
 
 print("Search - "+ str(bst.search_recursive_helper(0)))
-print("Is BST Satisfied = "+str(bst.is_bst_satisfied_mine()))
+
